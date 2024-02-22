@@ -1,0 +1,8 @@
+{
+  "matic": {
+    "ERC20UWatt": {
+      "address": "0xdD875635231E68E846cE190b1396AC0295D9e577",
+      "startBlock": 48103724
+    }
+  }
+}
