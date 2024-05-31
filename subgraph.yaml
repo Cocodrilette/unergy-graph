@@ -1,4 +1,4 @@
-specVersion: 1.0.0
+specVersion: 0.0.4
 indexerHints:
   prune: auto
 schema:
@@ -19,11 +19,7 @@ dataSources:
         - Approval
         - DelegateChanged
         - DelegateVotesChanged
-        - OwnerNominated
-        - OwnershipTransferred
-        - SetPermissionGranter
         - Transfer
-        - UnergyEventAddressUpdated
       abis:
         - name: ERC20UWatt
           file: ./abis/ERC20UWatt.json
@@ -34,14 +30,6 @@ dataSources:
           handler: handleDelegateChanged
         - event: DelegateVotesChanged(indexed address,uint256,uint256)
           handler: handleDelegateVotesChanged
-        - event: OwnerNominated(address)
-          handler: handleOwnerNominated
-        - event: OwnershipTransferred(indexed address,indexed address)
-          handler: handleOwnershipTransferred
-        - event: SetPermissionGranter(address)
-          handler: handleSetPermissionGranter
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
-        - event: UnergyEventAddressUpdated(address)
-          handler: handleUnergyEventAddressUpdated
       file: ./src/erc-20-u-watt.ts

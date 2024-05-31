@@ -28,44 +28,11 @@ type DelegateVotesChanged @entity(immutable: true) {
   transactionHash: Bytes!
 }
 
-type OwnerNominated @entity(immutable: true) {
-  id: Bytes!
-  pendingOwner: Bytes! # address
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
-}
-
-type OwnershipTransferred @entity(immutable: true) {
-  id: Bytes!
-  previousOwner: Bytes! # address
-  newOwner: Bytes! # address
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
-}
-
-type SetPermissionGranter @entity(immutable: true) {
-  id: Bytes!
-  permissionGranterAddr: Bytes! # address
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
-}
-
 type Transfer @entity(immutable: true) {
   id: Bytes!
   from: Bytes! # address
   to: Bytes! # address
   value: BigInt! # uint256
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
-}
-
-type UnergyEventAddressUpdated @entity(immutable: true) {
-  id: Bytes!
-  unergyEventAddr: Bytes! # address
   blockNumber: BigInt!
   blockTimestamp: BigInt!
   transactionHash: Bytes!
